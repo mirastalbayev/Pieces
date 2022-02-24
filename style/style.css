@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 70px 36px 46px 92px;
+  background-color: #424242;
+}
+
+.container .custom:not(:nth-child(4n)) {
+  margin-right: 58px;
+}
+
+.container .custom {
+  margin-bottom: 100px;
+}
+
+/* Кастомный чекбокс */
+.customCheckbox {
+  width: 176px;
+  height: 309px;
+  padding: 21px 29px 29px 30px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24.51px;
+}
+
+.customCheckbox-list__item {
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  color: #CCB26E;
+  border: 1px solid #CCB26E;
+  border-radius: 3px;
+}
+
+input[type=checkbox] + span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../check.svg') no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+input[type=checkbox]:checked + span:before {
+  opacity: 1;
+}
+
+/* Кастомный селект */
+.customSelect {
+  z-index: 1;
+}
+
+.choices__inner {
+  width: 176px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: #fff;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.07px;
+  color: #333;
+}
+
+.is-focused .choices__inner {
+  border-radius: 10px;
+  border-color: #CCB26E;
+}
+
+.is-open .choices__inner {
+  border-radius: 10px 10px 10px 10px;
+  border-color: #CCB26E;
+}
+
+.is-open .choices__list--dropdown {
+  top: 85%;
+  border-radius: 0 0 10px 10px;
+  border-color: #CCB26E;
+}
+
+.choices[data-type*=select-one]:after {
+  height: 8px;
+  width: 8px;
+  border-width: 0px;
+  border-right: 1px solid #666666;
+  border-top: 1px solid #666666;
+  transform: rotate(135deg);
+  margin-top: -6px;
+}
+
+.choices[data-type*=select-one].is-open:after {
+  border-width: 0px;
+  border-left: 1px solid #CCB26E;
+  border-bottom: 1px solid #CCB26E;
+  margin-top: -2px;
+}
+
+.choices__list--dropdown
+.choices__item--selectable {
+  padding-right: 0;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted::after {
+  display: none;
+}
+
+.choices__list--dropdown {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.07px;
+  color: #333;
+  z-index: -1;
+}
+
+#choices--default-item-choice-5 {
+  display: none;
+}
+
+#choices--default-item-choice-1 {
+  margin-top: 20px;
+}
+
+#choices--default-item-choice-7 {
+  margin-bottom: 10px;
+}
+
+/* Яндекс-карта */
+[class*='ground-pane'] {
+  filter: grayscale(1);
+}
+
+/* Кастомный скроллбар */
+.customScroll {
+  width: 399px;
+  height: 310px;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23.8px;
+  color: #333;
+}
+
+.simplebar-content-wrapper {
+  padding: 20px 30px;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.simplebar-track .simplebar-scrollbar:before {
+  background: #ccb26e;
+  border-radius: 5px;
+}
+
+/* Валидация формы и маска для телефона */
+.form {
+  width: 440px;
+  padding: 21px 30px;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.form label {
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  color: #ff5c00;
+}
+
+.formValidation input {
+  width: 380px;
+  height: 60px;
+  margin-bottom: 31px;
+  padding-left: 20px;
+  border-color: #ff5c00;
+  border-radius: 10px;
+  text-align: center left;
+  font-size: 16px;
+  line-height: 21.79px;
+}
+
+input[placeholder] {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18.75px;
+  color: #999;
+}
+
+button {
+  width: 192px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #ff5c00;
+  font-family: 'Roboto';
+  font-size: 20px;
+  line-height: 23.44px;
+  color: #fff;
+}
+
+/* Тултип */
+.tooltip {
+  position: relative;
+  width: 375px;
+  height: 160px;
+  padding: 20px 78px 20px 29px;
+  background-color: #fff;
+  color: #333;
+}
+
+.svg-tooltip {
+  cursor: pointer;
+}
+
+.popup {
+  left: 54%;
+  bottom: 36%;
+  position: absolute;
+  width: 163px;
+  padding: 7px 15px;
+  background: #666;
+  color: #fff;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16.34px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.popup::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #666 transparent transparent transparent;
+}
+
+.svg-tooltip:hover + .popup,
+.svg-tooltip:focus + .popup {
+  opacity: 1;
+}
+
+.svg-tooltip:hover path,
+.svg-tooltip:focus path {
+  fill: #ccb26e;
+}
